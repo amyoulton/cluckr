@@ -7,6 +7,15 @@
   margin: 0 0.5em 0 0.5em;
 }
 
+.nav-buttons {
+  display: flex;
+}
+
+.username {
+  display: inline;
+  padding: 12px;
+}
+
 .container {
   margin-top: 2em;
 }

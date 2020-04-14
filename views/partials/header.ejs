@@ -12,21 +12,34 @@
     <script src="/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm bg-light justify-content-between">
-      <div>
-        <img
-          class="chicken-icon"
-          src="/images/chicken.png"
-          alt="tiny chicken logo"
-        />
-      </div>
-      <form class="form-inline nav-buttons">
-        <button class="btn btn-lg btn-secondary" type="button">Sign In</button>
-        <button class="btn btn-lg btn-secondary" type="button">Clucks</button>
-      </form>
+    <header>
+      <nav class="navbar navbar-expand-sm bg-light justify-content-between">
+        <div>
+          <img
+            class="chicken-icon"
+            src="/images/chicken.png"
+            alt="tiny chicken logo"
+          />
         </div>
-      </div>
-    </nav>
+        <div class="nav-buttons">
+          <% if(loggedInUserName){ %>
+          <div class="username">Welcome back, <%= loggedInUserName %> !</div>
+          <form action="/sign_out" method="POST">
+            <button class="btn btn-lg btn-secondary" type="button">
+              Sign Out
+            </button>
+          </form>
+          <% } else { %>
+          <form action="/sign_in" method="POST" class="nav-buttons">
+            <button class="btn btn-lg btn-secondary" type="button">
+              Sign In
+            </button>
+          </form>
+          <% } %>
+          <button class="btn btn-lg btn-secondary" type="button">Clucks</button>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
 

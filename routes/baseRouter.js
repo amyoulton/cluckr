@@ -16,4 +16,9 @@ router.post('/sign_in', (request, response) => {
   response.redirect('/');
 });
 
+router.post('/sign_out', (request, response) => {
+  response.clearCookie('username');
+  response.redirect('/');
+});
+
 module.exports = router;
