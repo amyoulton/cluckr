@@ -14,6 +14,9 @@ app.use(logger('dev'));
 
 app.use(cookieParser());
 
+const baseRouter = require('./routes/baseRouter');
+app.use('/', baseRouter);
+
 const PORT = 3500;
 const ADDRESS = 'localhost'; // 127.0.0.1
 app.listen(PORT, ADDRESS, () => {
