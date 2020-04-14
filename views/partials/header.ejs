@@ -28,7 +28,7 @@
           <ul class="navbar-nav">
             <% if (loggedInUserName) { %>
             <li class="nav-item">
-                <form action="/clucks" method="GET" class="form-inline">
+                <form action="/clucks/new" method="GET" class="form-inline">
                 <button class="btn btn-lg btn-secondary" type="submit">
                 Cluck!
                  </button>
@@ -44,19 +44,19 @@
               </form>
             </li>
             <% } else { %>
+              <li class="nav-item">
+                  <form action="/clucks/new" method="GET" class="form-inline">
+                  <button class="btn btn-lg btn-secondary" type="submit">
+                  Cluck!
+                   </button>
+                  </form>
+              </li>
             <li class="nav-item">
-              <form action="/" method="GET" class="form-inline">
+              <form action="/clucks/new" method="GET" class="form-inline">
                 <button class="btn btn-lg btn-secondary" type="submit">
                   Sign In
                 </button>
               </form>
-            </li>
-            <li class="nav-item">
-                <form action="/clucks" method="GET" class="form-inline">
-                <button class="btn btn-lg btn-secondary" type="submit">
-                Cluck!
-                 </button>
-                </form>
             </li>
             <% } %>
           </ul>
