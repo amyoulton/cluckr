@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cluckr</title>
+    <title>Express Basics</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/master.css" />
 
@@ -13,36 +13,55 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-sm bg-light justify-content-between">
-        <div>
-          <img
-            class="chicken-icon"
-            src="/images/chicken.png"
-            alt="tiny chicken logo"
-          />
-        </div>
+      <nav class="navbar navbar-expand-lg bg-light justify-content-between">
+          <div class="logo">
+        <a class="navbar-brand" href="#">
+            <img
+              class="chicken-icon"
+              src="/images/chicken.png"
+              alt="tiny chicken logo"
+            />
+        </a>
+    </div>
+        </button>
         <div class="nav-buttons">
-          <% if(loggedInUserName){ %>
-          <div class="username">Welcome back, <%= loggedInUserName %> !</div>
-          <form action="/sign_out" method="POST">
-            <button class="btn btn-lg btn-secondary" type="button">
-              Sign Out
-            </button>
-          </form>
-          <% } else { %>
-          <form action="/sign_in" method="POST" class="nav-buttons">
-            <button class="btn btn-lg btn-secondary" type="button">
-              Sign In
-            </button>
-          </form>
-          <% } %>
-          <button class="btn btn-lg btn-secondary" type="button">Clucks</button>
+          <ul class="navbar-nav">
+            <% if (loggedInUserName) { %>
+            <li class="nav-item">
+                <form action="/clucks" method="GET" class="form-inline">
+                <button class="btn btn-lg btn-secondary" type="submit">
+                Cluck!
+                 </button>
+                </form>
+            </li>
+            <li class="nav-item">
+              <div class="username"><%= loggedInUserName %></div>
+            </li>
+
+            <li class="nav-item">
+              <form action="/sign_out" method="POST" class="form-inline">
+                <button class="btn btn-lg btn-secondary">Sign Out</button>
+              </form>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+              <form action="/" method="GET" class="form-inline">
+                <button class="btn btn-lg btn-secondary" type="submit">
+                  Sign In
+                </button>
+              </form>
+            </li>
+            <li class="nav-item">
+                <form action="/clucks" method="GET" class="form-inline">
+                <button class="btn btn-lg btn-secondary" type="submit">
+                Cluck!
+                 </button>
+                </form>
+            </li>
+            <% } %>
+          </ul>
         </div>
       </nav>
     </header>
   </body>
 </html>
-
-<!-- I am aware that the closing body tags and html tags should not be here, as they go in the footer. -->
-<!-- This seems to be an issue with the 'prettier' extension, a common issue upon googling. It's been like this in all -->
-<!-- of my express projects and they still work so I hope that this will not change anything. -->

@@ -1,3 +1,7 @@
+.logo {
+  padding: 0;
+}
+
 .chicken-icon {
   height: 55px;
   width: 55px;
@@ -7,13 +11,14 @@
   margin: 0 0.5em 0 0.5em;
 }
 
-.nav-buttons {
-  display: flex;
+.username {
+  margin-top: 0.5em;
+  font-size: 20px;
+  color: grey;
 }
 
-.username {
-  display: inline;
-  padding: 12px;
+.nav-item {
+  padding: 1px;
 }
 
 .container {
