@@ -48,3 +48,37 @@
   font-size: 15px;
   color: lightslategray;
 }
+
+.loaded-image {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.cluck-cards {
+  display: flex;
+}
+
+.avatar {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  width: 15%;
+}
+
+.avatar-img {
+  width: 80%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.cluck-img {
+  display: flex;
+  justify-content: center;
+}
