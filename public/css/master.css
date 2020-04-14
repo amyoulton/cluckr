@@ -53,6 +53,7 @@
   display: flex;
   width: 100%;
   height: auto;
+  border-radius: 2%;
 }
 
 .cluck-cards {
@@ -81,4 +82,8 @@
 .cluck-img {
   display: flex;
   justify-content: center;
+}
+
+.cluck-content {
+  font-size: 20px;
 }

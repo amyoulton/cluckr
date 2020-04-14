@@ -17,17 +17,15 @@ router.get('/new', (request, response) => {
 router.post('/', (request, response) => {
   const username = request.cookies.username;
 
-  if (username) {
-    const cluckInfo = request.body;
-    knex('clucks')
-      .insert({
-        username: username,
-        content: cluckInfo.content,
-        image_url: cluckInfo.image_url
-      })
-      .returning('*')
-      .then(response.redirect(`clucks/index`));
-  }
+  const cluckInfo = request.body;
+  knex('clucks')
+    .insert({
+      username: username,
+      content: cluckInfo.content,
+      image_url: cluckInfo.image_url
+    })
+    .returning('*')
+    .then(response.redirect(`clucks/index`));
 });
 
 router.get('/index', (request, response) => {
