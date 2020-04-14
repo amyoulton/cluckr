@@ -29,7 +29,7 @@
   margin: 1em;
 }
 
-.sign-in-btn {
+.btn-outline-secondary {
   float: right;
   width: 15%;
 }
@@ -37,4 +37,14 @@
 .username-heading {
   font-size: 25px;
   color: darkslategrey;
+}
+
+.cluck-header {
+  font-size: 20px;
+  color: darkslategrey;
+}
+
+.char-count {
+  font-size: 15px;
+  color: lightslategray;
 }
