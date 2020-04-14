@@ -13,6 +13,15 @@ app.use(logger('dev'));
 
 app.use(cookieParser());
 
+app.use(express.urlencoded({ extended: true }));
+
+app.use((request, response, next) => {
+  console.log('request.cookies', request.cookies);
+  const username = request.cookies.username;
+  response.locals.loggedInUserName = username || '';
+  next();
+});
+
 const baseRouter = require('./routes/baseRouter');
 app.use('/', baseRouter);
 

@@ -6,3 +6,21 @@
 .btn-lg {
   margin: 0 0.5em 0 0.5em;
 }
+
+.container {
+  margin-top: 2em;
+}
+
+.sign-in-body {
+  margin: 1em;
+}
+
+.sign-in-btn {
+  float: right;
+  width: 15%;
+}
+
+.username-heading {
+  font-size: 25px;
+  color: darkslategrey;
+}
