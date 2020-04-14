@@ -25,6 +25,9 @@ app.use((request, response, next) => {
 const baseRouter = require('./routes/baseRouter');
 app.use('/', baseRouter);
 
+const clucksRouter = require('./routes/clucksRouter');
+app.use('/clucks', clucksRouter);
+
 const PORT = 3500;
 const ADDRESS = 'localhost'; // 127.0.0.1
 app.listen(PORT, ADDRESS, () => {

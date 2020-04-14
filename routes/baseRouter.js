@@ -1,5 +1,5 @@
 const express = require('express');
-// const knex = require('../db/connections');
+const knex = require('../db/connections');
 const router = express.Router();
 
 const COOKIE_MAX_AGE = 1000 * 60 * 60 * 24 * 7; // A week in milliseconds
