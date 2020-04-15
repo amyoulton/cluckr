@@ -10,6 +10,11 @@ router.get('/', (request, response) => {
   response.redirect('clucks/index');
 });
 
+router.get('/sign_in', (request, response) => {
+  let message = 'none';
+  response.render('signIn', { message });
+});
+
 //allows sign in function to happen, redirects the user to the index page
 
 router.post('/sign_in', (request, response) => {

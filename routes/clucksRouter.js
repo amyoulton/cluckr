@@ -7,9 +7,10 @@ const router = express.Router();
 
 router.get('/new', (request, response) => {
   const username = request.cookies.username;
+  let message = 'error';
   if (username) {
     response.render('clucks/new');
-  } else response.render('SignIn');
+  } else response.render('SignIn', { message });
 });
 
 // after the user fills out the form on the new page, data is sent to the clucks table in the db

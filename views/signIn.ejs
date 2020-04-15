@@ -2,6 +2,11 @@
 <div class="container">
   <div class="card mb4">
     <div class="card-body sign-in-body">
+      <% if(message === 'error'){ %>
+      <h4 class="warning">
+        Whoops! You have to sign in before you can make a cluck!
+      </h4>
+      <% } %>
       <form action="/sign_in" method="POST" class="sign-in-form">
         <div class="form-group">
           <label class="username-heading" for="username">Username</label>
